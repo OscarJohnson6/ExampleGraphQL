@@ -1,0 +1,450 @@
+[ERROR] 2024-03-20 22:46:38.115 [main] AdvExerciseFinder - Problem reading JSON in generateResponse() 
+java.io.FileNotFoundException: exercises.graphql (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:219) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:157) ~[?:?]
+	at okio.Okio__JvmOkioKt.source(JvmOkio.kt:181) ~[okio-jvm-3.6.0.jar:?]
+	at okio.Okio.source(Unknown Source) ~[okio-jvm-3.6.0.jar:?]
+	at okhttp3.RequestBody$Companion$asRequestBody$1.writeTo(RequestBody.kt:167) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:62) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154) ~[okhttp-4.12.0.jar:?]
+	at api.example.graphql.AdvExerciseFinder.createApiResponse(AdvExerciseFinder.java:44) ~[classes/:?]
+	at unitTests.ApiResultsTest.testAPIResultsAll(ApiResultsTest.java:24) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+[ERROR] 2024-03-20 22:58:32.630 [main] AdvExerciseFinder - Problem reading JSON in generateResponse() 
+java.io.FileNotFoundException: D:\MainDocument\School\Semester4\Ent%20Java\Project\ExampleGraphQL\target\classes\exercises.graphql (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:219) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:157) ~[?:?]
+	at okio.Okio__JvmOkioKt.source(JvmOkio.kt:181) ~[okio-jvm-3.6.0.jar:?]
+	at okio.Okio.source(Unknown Source) ~[okio-jvm-3.6.0.jar:?]
+	at okhttp3.RequestBody$Companion$asRequestBody$1.writeTo(RequestBody.kt:167) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:62) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154) ~[okhttp-4.12.0.jar:?]
+	at api.example.graphql.AdvExerciseFinder.createApiResponse(AdvExerciseFinder.java:45) ~[classes/:?]
+	at unitTests.ApiResultsTest.testAPIResultsAll(ApiResultsTest.java:24) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+[ERROR] 2024-03-20 23:02:47.517 [main] AdvExerciseFinder - Problem reading JSON in generateResponse() 
+java.io.FileNotFoundException: exercises.graphql (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:219) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:157) ~[?:?]
+	at okio.Okio__JvmOkioKt.source(JvmOkio.kt:181) ~[okio-jvm-3.6.0.jar:?]
+	at okio.Okio.source(Unknown Source) ~[okio-jvm-3.6.0.jar:?]
+	at okhttp3.RequestBody$Companion$asRequestBody$1.writeTo(RequestBody.kt:167) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:62) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:?]
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154) ~[okhttp-4.12.0.jar:?]
+	at api.example.graphql.AdvExerciseFinder.createApiResponse(AdvExerciseFinder.java:45) ~[classes/:?]
+	at unitTests.ApiResultsTest.testAPIResultsAll(ApiResultsTest.java:24) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+[ERROR] 2024-03-20 23:03:31.787 [main] AdvExerciseFinder - Problem parsing JSON in generateResponse() 
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token q in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/var/task/node_modules/body-parser/lib/types/json.js:160:10)<br> &nbsp; &nbsp;at parse (/var/task/node_modules/body-parser/lib/types/json.js:83:15)<br> &nbsp; &nbsp;at /var/task/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at Asyn"[truncated 454 chars]; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1840) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:712) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:637) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1916) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:772) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4340) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4189) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3205) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3173) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at api.example.graphql.AdvExerciseFinder.createApiResponse(AdvExerciseFinder.java:49) ~[classes/:?]
+	at unitTests.ApiResultsTest.testAPIResultsAll(ApiResultsTest.java:24) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+[ERROR] 2024-03-20 23:10:24.169 [main] AdvExerciseFinder - Problem parsing JSON in generateResponse() 
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token q in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/var/task/node_modules/body-parser/lib/types/json.js:160:10)<br> &nbsp; &nbsp;at parse (/var/task/node_modules/body-parser/lib/types/json.js:83:15)<br> &nbsp; &nbsp;at /var/task/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at Asyn"[truncated 454 chars]; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1840) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:712) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:637) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1916) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:772) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4340) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4189) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3205) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3173) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at api.example.graphql.AdvExerciseFinder.createApiResponse(AdvExerciseFinder.java:49) ~[classes/:?]
+	at unitTests.ApiResultsTest.testAPIResultsAll(ApiResultsTest.java:24) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+[INFO ] 2024-03-20 23:17:29.410 [main] AdvExerciseFinder - src\main\resources\exercises.graphql
+[INFO ] 2024-03-20 23:26:35.066 [main] AdvExerciseFinder - query MyQuery {
+  exercises(exerciseQuery: {force: "pull", search: "ab"}) {
+    name
+    movement
+    primaryMuscles
+    force
+    instructions
+    type
+  }
+}
+[ERROR] 2024-03-20 23:28:20.313 [main] AdvExerciseFinder - Problem parsing JSON in generateResponse() 
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token q in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/var/task/node_modules/body-parser/lib/types/json.js:160:10)<br> &nbsp; &nbsp;at parse (/var/task/node_modules/body-parser/lib/types/json.js:83:15)<br> &nbsp; &nbsp;at /var/task/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at Asyn"[truncated 454 chars]; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1840) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:712) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:637) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1916) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:772) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4340) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4189) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3205) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3173) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at api.example.graphql.AdvExerciseFinder.createApiResponse(AdvExerciseFinder.java:59) ~[classes/:?]
+	at unitTests.ApiResultsTest.testAPIResultsAll(ApiResultsTest.java:24) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+[INFO ] 2024-03-20 23:29:31.478 [main] AdvExerciseFinder - query MyQuery {
+  exercises(exerciseQuery: {force: "pull", search: "ab"}) {
+    name
+    movement
+    primaryMuscles
+    force
+    instructions
+    type
+  }
+}
+[INFO ] 2024-03-20 23:36:18.712 [main] AdvExerciseFinder - query MyQuery {
+  exercises(exerciseQuery: {force: "pull", search: "ab"}) {
+    name
+    movement
+    primaryMuscles
+    force
+    instructions
+    type
+  }
+}}
+[ERROR] 2024-03-20 23:36:41.068 [main] AdvExerciseFinder - Problem parsing JSON in generateResponse() 
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token q in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/var/task/node_modules/body-parser/lib/types/json.js:160:10)<br> &nbsp; &nbsp;at parse (/var/task/node_modules/body-parser/lib/types/json.js:83:15)<br> &nbsp; &nbsp;at /var/task/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at Asyn"[truncated 454 chars]; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1840) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:712) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:637) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1916) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:772) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4340) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4189) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3205) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3173) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at api.example.graphql.AdvExerciseFinder.createApiResponse(AdvExerciseFinder.java:61) ~[classes/:?]
+	at unitTests.ApiResultsTest.testAPIResultsAll(ApiResultsTest.java:24) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+[INFO ] 2024-03-20 23:38:19.672 [main] AdvExerciseFinder - query MyQuery {
+  exercises(exerciseQuery: {force: "pull", search: "ab"}) {
+    name
+    movement
+    primaryMuscles
+    force
+    instructions
+    type
+  }
+}}
+[INFO ] 2024-03-21 08:31:36.097 [main] AdvExerciseFinder - query MyQuery {
+  exercises(exerciseQuery: {force: "pull", search: "ab"}) {
+    name
+    movement
+    primaryMuscles
+    force
+    instructions
+    type
+  }
+}}
+[INFO ] 2024-03-21 08:31:36.099 [main] AdvExerciseFinder - {"query":"query MyQuery {\n  exercises(exerciseQuery: {force: \"pull\", search: \"ab\"}) {\n    name\n    movement\n    primaryMuscles\n    force\n    instructions\n    type\n  }\n}"}
+[INFO ] 2024-03-21 08:32:48.786 [main] AdvExerciseFinder - {"query": query MyQuery {
+  exercises(exerciseQuery: {force: "pull", search: "ab"}) {
+    name
+    movement
+    primaryMuscles
+    force
+    instructions
+    type
+  }
+}}
+[INFO ] 2024-03-21 08:32:48.788 [main] AdvExerciseFinder - {"query":"query MyQuery {\n  exercises(exerciseQuery: {force: \"pull\", search: \"ab\"}) {\n    name\n    movement\n    primaryMuscles\n    force\n    instructions\n    type\n  }\n}"}
+[ERROR] 2024-03-21 08:32:51.703 [main] AdvExerciseFinder - Problem parsing JSON in generateResponse() 
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token q in JSON at position 10<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at parse (/var/task/node_modules/body-parser/lib/types/json.js:89:19)<br> &nbsp; &nbsp;at /var/task/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (async_hooks.js:197:9)<br> &nbsp; &nbsp;at invokeCallback (/var/task/node_modul"[truncated 435 chars]; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1840) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:712) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:637) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1916) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:772) ~[jackson-core-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4340) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4189) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3205) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3173) ~[jackson-databind-2.10.0.jar:2.10.0]
+	at api.example.graphql.AdvExerciseFinder.createApiResponse(AdvExerciseFinder.java:64) ~[classes/:?]
+	at unitTests.ApiResultsTest.testAPIResultsAll(ApiResultsTest.java:24) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
+	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]

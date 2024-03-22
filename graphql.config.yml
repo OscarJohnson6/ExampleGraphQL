@@ -1,0 +1,12 @@
+schema:
+- src/main/resources/schema.graphql
+projects:
+  myProject:
+  schemaPath: src/main/resources/schema.graphql
+  extensions:
+    endpoints:
+      default:
+        url: https://advanced-exercise-finder.p.rapidapi.com/
+        headers:
+          Authorization: Bearer 36880737e2mshf8be3a3dd806b84p1d53cfjsn167f3fbc701d
+          Host: advanced-exercise-finder.p.rapidapi.com
